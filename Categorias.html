@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>CATEGORIAS</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funcionesCategorias.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <center>
+        <a href="Cabanas.html" title="CABAÑAS">CABAÑAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Categorias.html" title="CATEGORIAS">CATEGORIAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Clientes.html" title="CLIENTES">CLIENTES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Mensaje.html" title="MENSAJES">MENSAJES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Reservas.html" title="RESERVAS">RESERVAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Calificacion.html" title="CALIFICACIONES">CALIFICACIONES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Usuarios.html" title="USUARIOS">USUARIOS</a>
+        <h2>GESTIÓN CATEGORIAS </h2>
+        <fieldset style="width: 30%">
+            <legend>Creación de la categoría</legend>
+            <table>
+                <tr>
+                    <th>NOMBRE:</th>
+                    <td><input type="text" id="nombre" maxlength="45" size="45"> </td>
+                </tr>
+                <tr>
+                    <th>DESCRIPCIÓN:</th>
+                    <td><input type="text" id="descripcion" maxlength="250" size="45"> </td>
+                </tr>
+                <td colspan="3">
+                    <input type="button" id="guardaCat" value="GUARDAR" onclick="guardarCategoria()">
+                    <input type="button" id="actualizaCat" value="ACTUALIZAR" onclick="editarCategoria() "
+                    disabled="true">
+                </td>
+                </tr>
+            </table>
+        </fieldset>
+        <h2> CONSULTA DE CATEGORIAS</h2>
+        <fieldset style="width: 30%">
+            <legend>Consulta</legend>
+            <table>
+                <tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" value="CONSULTAR" onclick="consultarCategoriaTodo()">
+                    </td>
+                </tr>
+                <tr>
+                    <table border="2" cellpadding="3" id="TablaResultadoCategorias">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+    </center>
+</body>
+
+</html>

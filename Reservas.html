@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <title>RESERVAS</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funcionesReservas.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+</head>
+
+<body onload="getDataCabana()  ;getDataCliente() ; consultarCantidadEstados()">
+    <center>
+        <a href="Cabanas.html" title="CABAÑAS">CABAÑAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Categorias.html" title="CATEGORIAS">CATEGORIAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Clientes.html" title="CLIENTES">CLIENTES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Mensaje.html" title="MENSAJES">MENSAJES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Reservas.html" title="RESERVAS">RESERVAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Calificacion.html" title="CALIFICACIONES">CALIFICACIONES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Usuarios.html" title="USUARIOS">USUARIOS</a>
+        <h2>GESTIÓN RESERVAS </h2>
+        <fieldset style="width: 30%">
+            <legend>Datos de Reserva</legend>
+            <table>
+                <tr>
+                    <th>CABAÑA:</th>
+                    <td>
+                        <select id="cabanaR" required>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>CLIENTE:</th>
+                    <td>
+                        <select id="clienteR" required>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>FECHA INICIO:</th>
+                    <td><input type="date" id="fecha_i"> </td>
+                </tr>
+                <tr>
+                    <th>FECHA ENTREGA:</th>
+                    <td><input type="date" id="fecha_e"> </td>
+                </tr>
+                <tr>
+                    <th>ESTADO  :</th>
+                    <td>                       
+                        <select id="estadoReservaS" required>
+                            <option value=created>Creado</option>
+                            <option value=completed>Completado</option>
+                            <option value=cancelled>Cancelado</option>
+                        </select>
+                    </td>
+                <tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" id="guardaRes" value="GUARDAR" onclick="guardarReserva()">
+                        <input type="button" id="actualizaRes" value="ACTUALIZAR" onclick="editarReserva() "
+                            disabled="true">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <h2> CONSULTA DE RESERVAS</h2>
+        <fieldset style="width: 30%">
+            <legend>Consulta</legend>
+            <table>
+                <tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" value="CONSULTAR" onclick="consultarReservaTodo()">
+                    </td>
+                </tr>
+                <tr>
+                    <table border="2" cellpadding="3" id="TablaResultadoReservas">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+        <h2> CANTIDAD DE RESERVAS RANGO</h2>
+        <fieldset style="width: 30%">
+            <legend>Cantidad reservas</legend>
+            <table>                
+                <tr>
+                <tr>
+                    <th>FECHA INICIO:</th>
+                    <td><input type="date" id="fecha_iR"> </td>
+                </tr>
+                <tr>
+                    <th>FECHA FIN:</th>
+                    <td><input type="date" id="fecha_fR"> </td>
+                </tr>                
+                <tr>
+                    <td colspan="3">
+                        <input type="button" value="CONSULTAR" onclick="consultarCantidadReserva()">
+                    </td>
+                </tr>                
+                </tr>                
+            </table>
+            <h3 id="TotalCantidad"></h3>
+            <h3 id="TotalCantidadReservas"></h3>
+        </fieldset>
+        <h2> MEJORES CLIENTES</h2>
+        <fieldset style="width: 30%">
+            <legend>Clientes</legend>
+            <table>
+                <tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" value="CONSULTAR" onclick="consultarClienteReserva()">
+                    </td>
+                </tr>
+                <tr>
+                    <table border="2" cellpadding="3" id="TablaResultadoResClien">
+                        <thead>
+                            <th>NOMBRE</th>
+                            <th>CORREO</th>
+                            <th>RESERVAS COMPLETAS</th>
+                            <th>RESERVAS CANCELADAS</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>ADMINISTRADORES</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funcionesUsuarios.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />    
+    <link rel="stylesheet" type="text/css" href="http://168.138.144.46/:8080/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="http://168.138.144.46/:8080/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="http://168.138.144.46/:8080/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <center>
+        <a href="Cabanas.html" title="CABAÑAS">CABAÑAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Categorias.html" title="CATEGORIAS">CATEGORIAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Clientes.html" title="CLIENTES">CLIENTES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Mensaje.html" title="MENSAJES">MENSAJES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Reservas.html" title="RESERVAS">RESERVAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Calificacion.html" title="CALIFICACIONES">CALIFICACIONES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Usuarios.html" title="USUARIOS">USUARIOS</a>
+        <h2>GESTIÓN ADMINISTRADOR</h2>
+        <fieldset style="width: 30%">
+            <legend>Datos de Administradores</legend> 
+            <table>
+                <tr>
+                    <th>NOMBRE:</th>
+                    <td><input type="text" id="nombreU" maxlength="250" size="45"></td>
+                </tr>
+                <tr>
+                    <th>CORREO:</th>
+                    <td><input type="email" id="correoU" maxlength="45" size="45"> </td>
+                </tr>
+                <tr>
+                    <th>CONTRASEÑA:</th>
+                    <td><input type="password" id="contrasenaU" maxlength="45" size="45"> </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" id="guardaAdm" value="GUARDAR" onclick="guardarAdministrador()">
+                        <input type="button"  id="actualizaAdm" value="ACTUALIZAR" onclick="editarAdministrador() " disabled="true">
+                    </td>                   
+                </tr>
+            </table>
+        </fieldset>        
+        <a href="http://168.138.144.46:8080/oauth2/authorization/github" title="GitHub" onclick="ingresoGitHub() ">Ingresar con usuario GitHub</a>
+
+        <h2> CONSULTA DE ADMINISTRADORES</h2>
+        <fieldset style="width: 30%">
+            <legend>Consulta</legend>
+            <table>
+                <tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" value="CONSULTAR" onclick="consultarAdministradorTodo() ,ingresoGitHub()">
+                    </td>
+                </tr>
+                <tr>
+                    <table border="2" cellpadding="3" id="TablaResultadoAdministradores">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+    </center>
+</body>
+
+</html>

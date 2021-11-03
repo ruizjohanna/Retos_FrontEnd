@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>MENSAJES</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funcionesMensajes.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+</head>
+
+<body onload="getDataCabana();getDataCliente()">
+    <center>
+        <a href="Cabanas.html" title="CABAÑAS">CABAÑAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Categorias.html" title="CATEGORIAS">CATEGORIAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Clientes.html" title="CLIENTES">CLIENTES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Mensaje.html" title="MENSAJES">MENSAJES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Reservas.html" title="RESERVAS">RESERVAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Calificacion.html" title="CALIFICACIONES">CALIFICACIONES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Usuarios.html" title="USUARIOS">USUARIOS</a>
+        <h2>GESTIÓN MENSAJES </h2>
+        <fieldset style="width: 30%">
+            <legend>Datos del Mensaje</legend>
+            <table>
+                <tr>
+                    <th>CABAÑA:</th>
+                    <td>
+                        <select id="cabanaM" required>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>CLIENTE:</th>
+                    <td>
+                        <select id="clienteM" required>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>MENSAJE:</th>
+                    <td><input type="text" id="mensajeM" maxlength="250" size="45"> </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" id="guardaMen" value="GUARDAR" onclick="guardarMensaje()">
+                        <input type="button" id="actualizaMen" value="ACTUALIZAR" onclick="editarMensaje() "
+                            disabled="true">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <h2> CONSULTA DE MENSAJES</h2>
+        <fieldset style="width: 30%">
+            <legend>Consulta</legend>
+            <table>
+                <tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" value="CONSULTAR" onclick="consultarMensajeTodo()">
+                    </td>
+                </tr>
+                <tr>
+                    <table border="2" cellpadding="3" id="TablaResultadoMensajes">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+    </center>
+</body>
+
+</html>

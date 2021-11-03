@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>CABAÑAS</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funcionesCabanas.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+</head>
+
+<body onload="getDataCategoria()">
+    <center>
+        <a href="Cabanas.html" title="CABAÑAS">CABAÑAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Categorias.html" title="CATEGORIAS">CATEGORIAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Clientes.html" title="CLIENTES">CLIENTES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Mensaje.html" title="MENSAJES">MENSAJES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Reservas.html" title="RESERVAS">RESERVAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Calificacion.html" title="CALIFICACIONES">CALIFICACIONES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Usuarios.html" title="USUARIOS">USUARIOS</a>
+        <h2>GESTIÓN CABAÑA </h2>
+        <fieldset style="width: 30%">
+            <legend>Creación de la cabaña</legend>
+            <table>
+                <tr>
+                <tr>
+                    <th>NOMBRE:</th>
+                    <td><input type="text" id="nombreCab" maxlength="45" size="45"> </td>
+                </tr>
+                <tr>
+                    <th>MARCA:</th>
+                    <td><input type="text" id="marca" maxlength="45" size="45"> </td>
+                </tr>
+                <tr>
+                    <th>CANTIDAD CUARTOS:</th>
+                    <td><input type="number" id="cuartos"> </td>
+                </tr>
+                <tr>
+                    <th>DESCRIPCIÓN:</th>
+                    <td><input type="text" id="descripcionC" maxlength="250" size="45"> </td>
+                </tr>
+                <tr>
+                    <th>CATEGORÍA:</th>
+                    <td>
+                        <select id="categoria" required>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" id="guardaCab" value="GUARDAR" onclick="guardarCabana()">
+                        <input type="button"  id="actualizaCab" value="ACTUALIZAR" onclick="editarCabana() " disabled="true">
+                    </td>                   
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+        <h2> CONSULTA DE CABAÑAS</h2>
+        <fieldset style="width: 30%">
+            <legend>Consulta</legend>
+            <table>
+                <tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" value="CONSULTAR" onclick="consultarCabanaTodo()">
+                    </td>
+                </tr>
+                <tr>
+                    <table border="2" cellpadding="3" id="TablaResultadoCabanas">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+    </center>
+</body>
+
+</html>

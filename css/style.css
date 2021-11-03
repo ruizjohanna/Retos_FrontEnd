@@ -1,0 +1,73 @@
+html {
+  background-color: #ffffff;
+}
+body {
+  background: #ffffff url("fondo.jpg") no-repeat fixed center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid rgb(37, 35, 35);
+}
+
+input {
+  background-color: rgb(125, 196, 214);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+th {
+  margin: 0 auto;
+  background-color: #b4aea5;
+  padding: 0 20px 20px 20px;
+}
+
+select {
+  margin: 0 auto;
+  background-color: rgb(125, 196, 214);
+}
+
+tr {
+  margin: 0 auto;
+  background-color: #b4aea5;
+  padding: 0 20px 20px 20px;
+}
+td {
+  margin: 0 auto;
+  background-color: #b4aea5;
+  padding: 0 20px 20px 20px;
+}
+html {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+}
+
+div.ex {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}

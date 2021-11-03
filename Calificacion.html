@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>CALIFICACIONES</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funcionesCalificaciones.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+</head>
+
+<body onload="getDataReserva()">
+    <center>
+        <a href="Cabanas.html" title="CABAÑAS">CABAÑAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Categorias.html" title="CATEGORIAS">CATEGORIAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Clientes.html" title="CLIENTES">CLIENTES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Mensaje.html" title="MENSAJES">MENSAJES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Reservas.html" title="RESERVAS">RESERVAS</a>&nbsp;&nbsp;&nbsp;
+        <a href="Calificacion.html" title="CALIFICACIONES">CALIFICACIONES</a>&nbsp;&nbsp;&nbsp;
+        <a href="Usuarios.html" title="USUARIOS">USUARIOS</a>
+        <h2>GESTIÓN CALIFICACIONES </h2>
+        <fieldset style="width: 30%">
+            <legend>Datos de Calificacion</legend>
+            <table>
+                <tr>
+                    <th>PUNTUACION:</th>
+                    <td><select name="puntuacion" id="puntuacion">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                    </td>
+                </tr>
+                <tr>
+                    <th>MENSAJE:</th>
+                    <td><input type="text" id="mensajeC" maxlength="250" size="45"> </td>
+                </tr>
+                <tr>
+                    <th>RESERVA:</th>
+                    <td>
+                        <select id="reservaC" required>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" id="guardaCal" value="GUARDAR" onclick="guardarCalificacion()">
+                        <input type="button"  id="actualizaCal" value="ACTUALIZAR" onclick="editarCalificacion() " disabled="true">
+                    </td>                   
+                </tr>
+            </table>
+        </fieldset>
+        <h2> CONSULTA DE CALIFICACIONES</h2>
+        <fieldset style="width: 30%">
+            <legend>Consulta</legend>
+            <table>
+                <tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="button" value="CONSULTAR" onclick="consultarCalificacionTodo()">
+                    </td>
+                </tr>
+                <tr>
+                    <table border="2" cellpadding="3" id="TablaResultadoCalificaciones">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+    </center>
+</body>
+
+</html>
