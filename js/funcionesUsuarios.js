@@ -2,7 +2,7 @@ var actualizarVar = 0;
 
 function consultarAdministradorTodo() {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Admin/all',
+        url: 'http://129.151.121.210:8080/api/Admin/all',
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -39,7 +39,7 @@ function guardarAdministrador() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Admin/save',
+            url: 'http://129.151.121.210:8080/api/Admin/save',
             data: datosaEnviar,
             type: 'POST',
             dataType: 'json',
@@ -58,7 +58,7 @@ function guardarAdministrador() {
 
 function traeEditarAdministrador(ide) {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Admin/' + ide,
+        url: 'http://129.151.121.210:8080/api/Admin/' + ide,
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -87,7 +87,7 @@ function editarAdministrador() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Admin/update',
+            url: 'http://129.151.121.210:8080/api/Admin/update',
             data: datosaEnviar,
             type: 'PUT',
             dataType: 'json',
@@ -109,7 +109,7 @@ function eliminarAdministrador(ide, cant) {
         var opcion = confirm("Es el último administrador, seguro que quieres borrar el administrador?");
         if (opcion == true) {
             $.ajax({
-                url: 'http://168.138.144.46:8080/api/Admin/' + ide,
+                url: 'http://129.151.121.210:8080/api/Admin/' + ide,
                 type: 'DELETE',
                 dataType: 'json',
                 success: function (response) {
@@ -128,7 +128,7 @@ function eliminarAdministrador(ide, cant) {
         }
     } else {
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Admin/' + ide,
+            url: 'http://129.151.121.210:8080/api/Admin/' + ide,
             type: 'DELETE',
             dataType: 'json',
             success: function (response) {
@@ -154,7 +154,7 @@ function limpiarFormulario() {
 
 function ingresoGitHub() {
     $.ajax({
-        url: 'http://168.138.144.46:8080/user',
+        url: 'http://129.151.121.210:8080/user',
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {

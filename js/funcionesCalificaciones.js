@@ -3,7 +3,7 @@ var actualizarVar = 0;
 function getDataReserva() {
     $.ajax({
         type: 'GET',
-        url: 'http://168.138.144.46:8080/api/Reservation/all',
+        url: 'http://129.151.121.210:8080/api/Reservation/all',
         dataType: 'json',
         success: function (respuesta) {
             console.log(respuesta)
@@ -19,7 +19,7 @@ function getDataReserva() {
 
 function consultarCalificacionTodo() {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Score/all',
+        url: 'http://129.151.121.210:8080/api/Score/all',
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -60,7 +60,7 @@ function guardarCalificacion() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Score/save',
+            url: 'http://129.151.121.210:8080/api/Score/save',
             data: datosaEnviar,
             type: 'POST',
             dataType: 'json',
@@ -78,7 +78,7 @@ function guardarCalificacion() {
 
 function traeEditarCalificacion(ide) {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Score/' + ide,
+        url: 'http://129.151.121.210:8080/api/Score/' + ide,
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -107,7 +107,7 @@ function editarCalificacion() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Score/update',
+            url: 'http://129.151.121.210:8080/api/Score/update',
             data: datosaEnviar,
             type: 'PUT',
             dataType: 'json',
@@ -126,7 +126,7 @@ function editarCalificacion() {
 
 function eliminarCalificacion(ide) {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Score/' + ide,
+        url: 'http://129.151.121.210:8080/api/Score/' + ide,
         type: 'DELETE',
         dataType: 'json',
         success: function (respuesta) {

@@ -2,7 +2,7 @@ var actualizarVar = 0;
 
 function consultarClienteTodo() {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Client/all',
+        url: 'http://129.151.121.210:8080/api/Client/all',
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -43,7 +43,7 @@ function guardarCliente() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Client/save',
+            url: 'http://129.151.121.210:8080/api/Client/save',
             data: datosaEnviar,
             type: 'POST',
             dataType: 'json',
@@ -62,7 +62,7 @@ function guardarCliente() {
 
 function traeEditarCliente(ide) {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Client/' + ide,
+        url: 'http://129.151.121.210:8080/api/Client/' + ide,
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -93,7 +93,7 @@ function editarCliente() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Client/update',
+            url: 'http://129.151.121.210:8080/api/Client/update',
             data: datosaEnviar,
             type: 'PUT',
             dataType: 'json',
@@ -113,7 +113,7 @@ function editarCliente() {
 function eliminarCliente(ide, mensaje, reservacion) {
     if (mensaje == 0 && reservacion == 0) {
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Client/' + ide,
+            url: 'http://129.151.121.210:8080/api/Client/' + ide,
             type: 'DELETE',
             dataType: 'json',
             success: function (respuesta) {

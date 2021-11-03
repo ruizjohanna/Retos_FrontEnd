@@ -3,7 +3,7 @@ var actualizarVar = 0;
 function getDataCabana() {
     $.ajax({
         type: 'GET',
-        url: 'http://168.138.144.46:8080/api/Cabin/all',
+        url: 'http://129.151.121.210:8080/api/Cabin/all',
         dataType: 'json',
         success: function (respuesta) {
             console.log(respuesta)
@@ -20,7 +20,7 @@ function getDataCabana() {
 function getDataCliente() {
     $.ajax({
         type: 'GET',
-        url: 'http://168.138.144.46:8080/api/Client/all',
+        url: 'http://129.151.121.210:8080/api/Client/all',
         dataType: 'json',
         success: function (respuestaC) {
             console.log(respuestaC)
@@ -38,7 +38,7 @@ function consultarReservaTodo() {
     let fechaI = "";
     let fechaE = "";
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Reservation/all',
+        url: 'http://129.151.121.210:8080/api/Reservation/all',
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -93,7 +93,7 @@ function guardarReserva() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Reservation/save',
+            url: 'http://129.151.121.210:8080/api/Reservation/save',
             data: datosaEnviar,
             type: 'POST',
             dataType: 'json',
@@ -114,7 +114,7 @@ function traeEditarReserva(ide) {
     let fechaI = "";
     let fechaE = "";
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Reservation/' + ide,
+        url: 'http://129.151.121.210:8080/api/Reservation/' + ide,
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -152,7 +152,7 @@ function editarReserva() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Reservation/update',
+            url: 'http://129.151.121.210:8080/api/Reservation/update',
             data: datosaEnviar,
             type: 'PUT',
             dataType: 'json',
@@ -172,7 +172,7 @@ function editarReserva() {
 function eliminarReserva(ide) {
 
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Reservation/' + ide,
+        url: 'http://129.151.121.210:8080/api/Reservation/' + ide,
         type: 'DELETE',
         dataType: 'json',
         success: function (response) {
@@ -200,7 +200,7 @@ function consultarCantidadReserva() {
         alert('Rango de fechas de consulta incorrecto, por favor verifique');
     } else {
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Reservation/report-dates/' + fechaI + "/" + fechaE,
+            url: 'http://129.151.121.210:8080/api/Reservation/report-dates/' + fechaI + "/" + fechaE,
             type: 'GET',
             dataType: 'json',
             success: function (respuesta) {
@@ -216,7 +216,7 @@ function consultarCantidadReserva() {
 function consultarCantidadEstados() {
     let variable = document.getElementById("TotalCantidadReservas");
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Reservation/report-status',
+        url: 'http://129.151.121.210:8080/api/Reservation/report-status',
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -250,7 +250,7 @@ function sortTable(table_id, sortColumn) {
 function consultarClienteReserva() {
 
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Reservation/report-clients',
+        url: 'http://129.151.121.210:8080/api/Reservation/report-clients',
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {            

@@ -2,7 +2,7 @@ var actualizarVar = 0;
 
 function consultarCategoriaTodo() {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Category/all',
+        url: 'http://129.151.121.210:8080/api/Category/all',
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -45,7 +45,7 @@ function guardarCategoria() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Category/save',
+            url: 'http://129.151.121.210:8080/api/Category/save',
             data: datosaEnviar,
             type: 'POST',
             dataType: 'json',
@@ -63,7 +63,7 @@ function guardarCategoria() {
 
 function traeEditarCategoria(ide) {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Category/' + ide,
+        url: 'http://129.151.121.210:8080/api/Category/' + ide,
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -90,7 +90,7 @@ function editarCategoria() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Category/update',
+            url: 'http://129.151.121.210:8080/api/Category/update',
             data: datosaEnviar,
             type: 'PUT',
             dataType: 'json',
@@ -111,7 +111,7 @@ function eliminarCategoria(ide, val) {
 
     if (val == 0) {
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Category/' + ide,
+            url: 'http://129.151.121.210:8080/api/Category/' + ide,
             type: 'DELETE',
             dataType: 'json',
             success: function (response) {

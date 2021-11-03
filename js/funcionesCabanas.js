@@ -3,7 +3,7 @@ var actualizarVar = 0;
 function getDataCategoria() {
     $.ajax({
         type: 'GET',
-        url: 'http://168.138.144.46:8080/api/Category/all',
+        url: 'http://129.151.121.210:8080/api/Category/all',
         dataType: 'json',
         success: function (respuesta) {
             console.log(respuesta)
@@ -19,7 +19,7 @@ function getDataCategoria() {
 
 function consultarCabanaTodo() {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Cabin/all',
+        url: 'http://129.151.121.210:8080/api/Cabin/all',
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -64,7 +64,7 @@ function guardarCabana() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Cabin/save',
+            url: 'http://129.151.121.210:8080/api/Cabin/save',
             data: datosaEnviar,
             type: 'POST',
             dataType: 'json',
@@ -85,7 +85,7 @@ function guardarCabana() {
 
 function traeEditarCabana(ide) {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Cabin/' + ide,
+        url: 'http://129.151.121.210:8080/api/Cabin/' + ide,
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -118,7 +118,7 @@ function editarCabana() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Cabin/update',
+            url: 'http://129.151.121.210:8080/api/Cabin/update',
             data: datosaEnviar,
             type: 'PUT',
             dataType: 'json',
@@ -138,7 +138,7 @@ function editarCabana() {
 function eliminarCabana(ide, mensaje, reservacion) {
     if (mensaje == 0 && reservacion == 0) {
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Cabin/' + ide,
+            url: 'http://129.151.121.210:8080/api/Cabin/' + ide,
             type: 'DELETE',
             dataType: 'json',
             success: function (response) {

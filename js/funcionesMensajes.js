@@ -3,7 +3,7 @@ var actualizarVar = 0;
 function getDataCabana() {
     $.ajax({
         type: 'GET',
-        url: 'http://168.138.144.46:8080/api/Cabin/all',
+        url: 'http://129.151.121.210:8080/api/Cabin/all',
         dataType: 'json',
         success: function (respuesta) {
             console.log(respuesta)
@@ -20,7 +20,7 @@ function getDataCabana() {
 function getDataCliente() {
     $.ajax({
         type: 'GET',
-        url: 'http://168.138.144.46:8080/api/Client/all',
+        url: 'http://129.151.121.210:8080/api/Client/all',
         dataType: 'json',
         success: function (respuesta) {
             console.log(respuesta)
@@ -36,7 +36,7 @@ function getDataCliente() {
 
 function consultarMensajeTodo() {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Message/all',
+        url: 'http://129.151.121.210:8080/api/Message/all',
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -65,7 +65,7 @@ function consultarMensajeTodo() {
 
 function traeEditarMensaje(ide) {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Message/' + ide,
+        url: 'http://129.151.121.210:8080/api/Message/' + ide,
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -94,7 +94,7 @@ function editarMensaje() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Message/update',
+            url: 'http://129.151.121.210:8080/api/Message/update',
             data: datosaEnviar,
             type: 'PUT',
             dataType: 'json',
@@ -113,7 +113,7 @@ function editarMensaje() {
 
 function eliminarMensaje(ide) {
     $.ajax({
-        url: 'http://168.138.144.46:8080/api/Message/' + ide,
+        url: 'http://129.151.121.210:8080/api/Message/' + ide,
         type: 'DELETE',
         dataType: 'json',
         success: function (respuesta) {
@@ -137,7 +137,7 @@ function guardarMensaje() {
         var datosaEnviar = JSON.stringify(datos);
 
         $.ajax({
-            url: 'http://168.138.144.46:8080/api/Message/save',
+            url: 'http://129.151.121.210:8080/api/Message/save',
             data: datosaEnviar,
             type: 'POST',
             dataType: 'json',
